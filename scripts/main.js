@@ -12,6 +12,7 @@ document.getElementById("body-bg-change").addEventListener("click", function(){
         }       
     }
 })
+// ----------------------------------------------------------------------------------------------
 /* main section top right part day determine */
 const fullDateToday=new Date();
 const dayToday=fullDateToday.getDay();
@@ -29,3 +30,31 @@ document.getElementById("date").innerText=dateToday;
 // year
 const yearToday=fullDateToday.getFullYear();
 document.getElementById("year").innerText=yearToday;
+// -------------------------------------------------------------------------------------------
+
+/* decrease and increase number after click */
+const completeButtons=document.querySelectorAll(".complete");
+for(let completeButton of completeButtons ){
+    completeButton.addEventListener("click", function(){
+        const id=completeButton.id;
+        const clickedButton=document.getElementById(id);
+        clickedButton.style.backgroundColor="#dfe0e9";
+        clickedButton.style.color="#cfd0d9";
+        let decreaseNumber=parseInt(document.getElementById("number-to-decrease").innerText);
+        let increaseNumber=parseInt(document.getElementById("number-to-increase").innerText);
+        if(!clickedButton.classList.contains("disabled")){
+            decreaseNumber=decreaseNumber-1;
+            console.log(decreaseNumber);
+            document.getElementById("number-to-decrease").innerText=decreaseNumber;
+            increaseNumber=increaseNumber+1;
+            console.log(increaseNumber);
+            document.getElementById("number-to-increase").innerText=increaseNumber;
+        }
+        else{
+            decreaseNumber=decreaseNumber;
+            increaseNumber=increaseNumber;
+        }
+        
+        clickedButton.classList.add("disabled");
+        })}
+        

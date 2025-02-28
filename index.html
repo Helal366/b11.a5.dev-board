@@ -39,7 +39,7 @@
                  <div class="flex items-center gap-8">
                     <button class="bg-[#f4f7ff] rounded-full flex items-center gap-4 px-4 py-3">
                         <img src="assets/checkbox.png" alt="">
-                        <span class="text-3xl font-bold">23</span>
+                        <span id="number-to-increase" class="text-3xl font-bold">24</span>
                     </button>
                     <div class="bg-[#f4f7ff] rounded-full w-12 h-12">
                         <button id="body-bg-change" class="text-white rounded-full m-2 cursor-pointer">
@@ -65,8 +65,10 @@
                         </div>
                         <!-- text part two span added -->
                         <div class="flex flex-col justify-start">
-                            <span class="font-medium">Task Assigned </span>
-                            <span class="font-bold text-3xl">05</span>
+                            <span class="font-medium text-sm">Task Assigned </span>
+                            <div>
+                              <span id="number-to-decrease" class="font-bold text-3xl">6</span>
+                            </div>
                         </div>
                     </div>
                     <!-- top middle div -->
@@ -122,13 +124,13 @@
                              </div>
                              <!-- bottom right -->
                               <div>
-                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                                <button id="one" class="complete btn bg-[#3752FD] text-white rounded-xl">Completed</button>
                               </div>
                            </div>
                     </div>
                     
                     <!-- card-two -->
-                    <div class="rounded-xl bg-[#f4f7ff] p-6">
+                    <div  class="rounded-xl bg-[#f4f7ff] p-6">
                         <!-- top button type div -->
                          <div class="mb-4">
                             <button class="rounded-xl bg-white px-4 py-2">CloudSync</button>
@@ -137,7 +139,7 @@
                           <p class="font-medium text-2xl mb-4">Add Dark Mode </p>
                           <!-- description -->
                           <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
-                            Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                           Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.
                           </p>
                           <!-- bottom part div -->
                            <div class="flex justify-between items-center">
@@ -148,7 +150,7 @@
                              </div>
                              <!-- bottom right -->
                               <div>
-                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                                <button id="two" class="complete btn bg-[#3752FD] text-white rounded-xl">Completed</button>
                               </div>
                            </div>
                     </div>
@@ -174,7 +176,7 @@
                              </div>
                              <!-- bottom right -->
                               <div>
-                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                                <button id="three" class="complete btn bg-[#3752FD] text-white rounded-xl">Completed</button>
                               </div>
                            </div>
                     </div>
@@ -186,7 +188,7 @@
                             <button class="rounded-xl bg-white px-4 py-2">Meta</button>
                          </div>
                          <!-- title -->
-                          <p class="font-medium text-2xl mb-4">Fix Mobile Button Issue </p>
+                          <p class="font-medium text-2xl mb-4">Add new emoji 🤲 </p>
                           <!-- description -->
                           <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
                             Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.
@@ -200,7 +202,7 @@
                              </div>
                              <!-- bottom right -->
                               <div>
-                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                                <button id="four" class="complete btn bg-[#3752FD] text-white rounded-xl">Completed</button>
                               </div>
                            </div>
                     </div>
@@ -212,10 +214,10 @@
                             <button class="rounded-xl bg-white px-4 py-2">Google LLC</button>
                          </div>
                          <!-- title -->
-                          <p class="font-medium text-2xl mb-4">Add Dark Mode </p>
+                          <p class="font-medium text-2xl mb-4">Integrate OpenAI API  </p>
                           <!-- description -->
                           <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
-                            Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                           Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.
                           </p>
                           <!-- bottom part div -->
                            <div class="flex justify-between items-center">
@@ -226,7 +228,7 @@
                              </div>
                              <!-- bottom right -->
                               <div>
-                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                                <button id="five" class="complete btn bg-[#3752FD] text-white rounded-xl">Completed</button>
                               </div>
                            </div>
                     </div>
@@ -238,7 +240,7 @@
                             <button class="rounded-xl bg-white px-4 py-2">Glassdoar</button>
                          </div>
                          <!-- title -->
-                          <p class="font-medium text-2xl mb-4">Optimize  Home page  </p>
+                          <p class="font-medium text-2xl mb-4">Improve Job searching  </p>
                           <!-- description -->
                           <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
                             Debug using Chrome Toadstools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.
@@ -252,7 +254,7 @@
                              </div>
                              <!-- bottom right -->
                               <div>
-                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                                <button id="six" class="complete btn bg-[#3752FD] text-white rounded-xl">Completed</button>
                               </div>
                            </div>
                     </div>
@@ -260,16 +262,20 @@
                  </section>
             </section>
             <!-- right side aside -->
-            <aside class="rounded-lg">
+            <aside class="rounded-lg py-6 bg-white">
                     <!-- top part -->
                     <!-- text & image -->
-                  <div class="flex gap-5 justify-center items-center">
+                  <div class="flex gap-5 justify-center items-center mb-4">
                     <img src="assets/activity.png" alt="">
                     <span class="font-medium text-xl">Activity Log</span>
                   </div>
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, asperiores illo assumenda ipsam non excepturi quia natus odio omnis autem?
+                     <!-- button -->
+                  <div class="flex justify-center items-center mb-3">
+                     <button class="btn bg-[#3752fd] text-white rounded-xl px-5 py-3">Clear History</button>
                   </div>
+                  <hr class="border-0 border-t-[1px] border-dashed border-[#d7dcff] mb-6">
+                  <!-- div where to append -->
+                   <div id="history-container"></div>
             </aside>      
         </main>
     </section>
