@@ -21,10 +21,10 @@
     <!-- title -->
     <title>A5 Dev Board</title>
 </head>
-<body class=" bg-[#f4f7ff] m-0 p-0">
-    <section class="container mx-auto max-w-screen-xl">
-        <header class="py-8">
-            <nav class="flex justify-between bg-white rounded-lg p-4">
+<body class="m-0 p-0 bg-[#f4f7ff]">
+    <section class="container mx-auto max-w-screen-2xl">
+        <header class="pt-8 mb-5">
+            <nav class="flex justify-between bg-white rounded-xl p-4">
                 <!-- left side div -->
                 <div class="flex gap-5 justify-center items-center">
                     <div class="w-12 h-12">
@@ -49,6 +49,229 @@
                  </div>
             </nav>
         </header>
+
+        <main class="grid grid-cols-4 gap-5">
+            
+             <!-- left big section -->
+             <section class="col-span-3 rounded-xl p-6 bg-white">
+
+                <!-- top part div of big section -->
+                <div class="grid grid-cols-4 gap-6 mb-16">
+                    <!-- top left div -->
+                    <div class="p-7 rounded-xl flex items-center gap-5 bg-[#f4f7ff]">
+                        <!-- image check sign -->
+                         <div class="w-16 h-16 rounded-full bg-white flex justify-center items-center">
+                            <img class="rounded-full m-5" src="assets/checkbox.png" alt="">
+                        </div>
+                        <!-- text part two span added -->
+                        <div class="flex flex-col justify-start">
+                            <span class="font-medium">Task Assigned </span>
+                            <span class="font-bold text-3xl">05</span>
+                        </div>
+                    </div>
+                    <!-- top middle div -->
+                    <div class="col-span-2 rounded-xl py-6 pl-10 pr-20 flex gap-5 items-center" style="background: linear-gradient(to right, #3752FD 0%, #6C7FFA 53%, #9BA8F8 100%)">
+                        <!-- image -->
+                         <div><img src="assets/board.png" alt=""></div>
+                         <!-- text two span added here -->
+                          <div class="flex flex-col">
+                            <span class="text-white font-medium text-2xl">Discover Something </span>
+                            <span class="text-white font-medium text-2xl">New Today!</span>
+                          </div>
+
+                    </div>
+                    <!-- top right div -->
+                    <div class="bg-[#f4f7ff] rounded-xl flex items-center gap-4 py-7 pl-6">
+                        <!-- image -->
+                         <div class="w-16 h-16 rounded-full bg-white flex justify-center items-center">
+                            <img class="m-5" src="assets/calender.png" alt="">
+                        </div>
+                        <!-- text  -->
+                         <div class="flex flex-col justify-start">
+                            <div><span id="day" class="text-2xl">Wed</span></div>
+                            <div>
+                                <span class="text-2xl font-semibold" id="month">Jul</span>
+                                <span class="text-2xl font-semibold" id="date">28</span>
+                                <span class="text-2xl font-semibold" id="year">2025</span>
+                            </div>
+                         </div>
+                    </div>
+
+                </div>
+
+                <!-- body part section of big section -->
+                 <section class="grid grid-cols-3 gap-9">
+                    <!-- card-one -->
+                    <div class="rounded-xl bg-[#f4f7ff] p-6">
+                        <!-- top button type div -->
+                         <div class="mb-4">
+                            <button class="rounded-xl bg-white px-4 py-2">ShopEase</button>
+                         </div>
+                         <!-- title -->
+                          <p class="font-medium text-2xl mb-4">Fix Mobile Button Issue </p>
+                          <!-- description -->
+                          <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
+                            Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.
+                          </p>
+                          <!-- bottom part div -->
+                           <div class="flex justify-between items-center">
+                            <!-- bottom left -->
+                             <div class="flex flex-col justify-start gap-[2px]">
+                                <span class="text-xs text-[#496c77]">Deadline</span>
+                                <span>21 March 2025</span>
+                             </div>
+                             <!-- bottom right -->
+                              <div>
+                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                              </div>
+                           </div>
+                    </div>
+                    
+                    <!-- card-two -->
+                    <div class="rounded-xl bg-[#f4f7ff] p-6">
+                        <!-- top button type div -->
+                         <div class="mb-4">
+                            <button class="rounded-xl bg-white px-4 py-2">CloudSync</button>
+                         </div>
+                         <!-- title -->
+                          <p class="font-medium text-2xl mb-4">Add Dark Mode </p>
+                          <!-- description -->
+                          <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
+                            Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                          </p>
+                          <!-- bottom part div -->
+                           <div class="flex justify-between items-center">
+                            <!-- bottom left -->
+                             <div class="flex flex-col justify-start gap-[2px]">
+                                <span class="text-xs text-[#496c77]">Deadline</span>
+                                <span>21 March 2025</span>
+                             </div>
+                             <!-- bottom right -->
+                              <div>
+                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                              </div>
+                           </div>
+                    </div>
+
+                     <!-- card-three -->
+                     <div class="rounded-xl bg-[#f4f7ff] p-6">
+                        <!-- top button type div -->
+                         <div class="mb-4">
+                            <button class="rounded-xl bg-white px-4 py-2">SwiftPay</button>
+                         </div>
+                         <!-- title -->
+                          <p class="font-medium text-2xl mb-4">Optimize  Home page  </p>
+                          <!-- description -->
+                          <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
+                            Debug using Chrome Toadstools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.
+                          </p>
+                          <!-- bottom part div -->
+                           <div class="flex justify-between items-center">
+                            <!-- bottom left -->
+                             <div class="flex flex-col justify-start gap-[2px]">
+                                <span class="text-xs text-[#496c77]">Deadline</span>
+                                <span>21 March 2025</span>
+                             </div>
+                             <!-- bottom right -->
+                              <div>
+                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                              </div>
+                           </div>
+                    </div>
+
+                    <!-- card-four -->
+                    <div class="rounded-xl bg-[#f4f7ff] p-6">
+                        <!-- top button type div -->
+                         <div class="mb-4">
+                            <button class="rounded-xl bg-white px-4 py-2">Meta</button>
+                         </div>
+                         <!-- title -->
+                          <p class="font-medium text-2xl mb-4">Fix Mobile Button Issue </p>
+                          <!-- description -->
+                          <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
+                            Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.
+                          </p>
+                          <!-- bottom part div -->
+                           <div class="flex justify-between items-center">
+                            <!-- bottom left -->
+                             <div class="flex flex-col justify-start gap-[2px]">
+                                <span class="text-xs text-[#496c77]">Deadline</span>
+                                <span>21 March 2025</span>
+                             </div>
+                             <!-- bottom right -->
+                              <div>
+                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                              </div>
+                           </div>
+                    </div>
+                    
+                    <!-- card-five -->
+                    <div class="rounded-xl bg-[#f4f7ff] p-6">
+                        <!-- top button type div -->
+                         <div class="mb-4">
+                            <button class="rounded-xl bg-white px-4 py-2">Google LLC</button>
+                         </div>
+                         <!-- title -->
+                          <p class="font-medium text-2xl mb-4">Add Dark Mode </p>
+                          <!-- description -->
+                          <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
+                            Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                          </p>
+                          <!-- bottom part div -->
+                           <div class="flex justify-between items-center">
+                            <!-- bottom left -->
+                             <div class="flex flex-col justify-start gap-[2px]">
+                                <span class="text-xs text-[#496c77]">Deadline</span>
+                                <span>21 March 2025</span>
+                             </div>
+                             <!-- bottom right -->
+                              <div>
+                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                              </div>
+                           </div>
+                    </div>
+
+                     <!-- card-six -->
+                     <div class="rounded-xl bg-[#f4f7ff] p-6">
+                        <!-- top button type div -->
+                         <div class="mb-4">
+                            <button class="rounded-xl bg-white px-4 py-2">Glassdoar</button>
+                         </div>
+                         <!-- title -->
+                          <p class="font-medium text-2xl mb-4">Optimize  Home page  </p>
+                          <!-- description -->
+                          <p class="text-xs p-4 mb-5 bg-white rounded-xl text-[#808080]">
+                            Debug using Chrome Toadstools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly.
+                          </p>
+                          <!-- bottom part div -->
+                           <div class="flex justify-between items-center">
+                            <!-- bottom left -->
+                             <div class="flex flex-col justify-start gap-[2px]">
+                                <span class="text-xs text-[#496c77]">Deadline</span>
+                                <span>21 March 2025</span>
+                             </div>
+                             <!-- bottom right -->
+                              <div>
+                                <button id="complete" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                              </div>
+                           </div>
+                    </div>
+                    
+                 </section>
+            </section>
+            <!-- right side aside -->
+            <aside class="rounded-lg">
+                    <!-- top part -->
+                    <!-- text & image -->
+                  <div class="flex gap-5 justify-center items-center">
+                    <img src="assets/activity.png" alt="">
+                    <span class="font-medium text-xl">Activity Log</span>
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, asperiores illo assumenda ipsam non excepturi quia natus odio omnis autem?
+                  </div>
+            </aside>      
+        </main>
     </section>
     
     <script src="scripts/main.js"></script>
