@@ -1,4 +1,3 @@
-/*body background color change */
 const bgColors=["#f4f7ff","#ade8dd", "#e7f8d7", "#c8e3cd", "#eba6af", "#bae6f4", "#d3ad9f", "#e1a4b6", "#abcdc5", "#d5cbf5"];
 let bgColorsIndex=0;
 document.getElementById("body-bg-change").addEventListener("click", function(){
@@ -12,25 +11,17 @@ document.getElementById("body-bg-change").addEventListener("click", function(){
         }       
     }
 })
-// ----------------------------------------------------------------------------------------------
-/* main section top right part day determine */
 const fullDateToday=new Date();
 const dayToday=fullDateToday.getDay();
 const allDaysOfWeek=["Sun ,", "Mon ,", "Tues ,", "Wed ,", "Thu ,", "Fri ,", "Sat ,"];
 document.getElementById("day").innerText=allDaysOfWeek[dayToday];
-
-/* main section top right part date determine */
-// month
 const monthToday=fullDateToday.getMonth();
 const allMonth=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 document.getElementById("month").innerText=allMonth[monthToday];
-// date
 const dateToday=fullDateToday.getDate();
 document.getElementById("date").innerText=dateToday;
-// year
 const yearToday=fullDateToday.getFullYear();
 document.getElementById("year").innerText=yearToday;
-// time
 const hourToday=fullDateToday.getHours();
 const minuteToday=fullDateToday.getMinutes();
 const secondToday=fullDateToday.getSeconds();
@@ -44,15 +35,10 @@ else{
  ampm="AM";
 }
 let currentTime=currentHour+":"+minuteToday+":"+secondToday+" "+ampm
-// -------------------------------------------------------------------------------------------
-
-/* decrease and increase number after click, alert, add history */
 const completeButtons=document.querySelectorAll(".complete");
 for(let completeButton of completeButtons ){
     completeButton.addEventListener("click", function(){
-    //alert
     alert("Board updated Successfully.") 
-    //decrease increase
     const id=completeButton.id;  
     const clickedButton=document.getElementById(id);
     clickedButton.style.backgroundColor="#dfe0e9";
@@ -69,7 +55,6 @@ for(let completeButton of completeButtons ){
         decreaseNumber=decreaseNumber;
         increaseNumber=increaseNumber;
     }
-    // add history
     const titleParagraph=document.getElementById(id+"-title").innerText; 
     const historyContainer=document.getElementById("history-container");
     const historyAdd=document.createElement("p");
@@ -84,10 +69,10 @@ for(let completeButton of completeButtons ){
     historyContainer.appendChild(historyAdd);
     clickedButton.classList.add("disabled");
 })}
-
-/* clear history*/
 document.getElementById("clear-history").addEventListener("click", function(){
     document.getElementById("history-container").innerHTML="";
 })
-
+document.getElementById("blog-html").addEventListener("click", function(){
+    window.location.href="blog.html";
+})
         
