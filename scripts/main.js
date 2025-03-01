@@ -9,22 +9,16 @@ document.getElementById("body-bg-change").addEventListener("click", function(){
         }
         else{
             bgColorsIndex=bgColorsIndex+1;
-        }       
-    }
-});
+        }
+    }});
 
-// day date month year
-const fullDateToday=new Date();
-const dayToday=fullDateToday.getDay();
-const allDaysOfWeek=["Sun ,", "Mon ,", "Tues ,", "Wed ,", "Thu ,", "Fri ,", "Sat ,"];
-document.getElementById("day").innerText=allDaysOfWeek[dayToday];
-const monthToday=fullDateToday.getMonth();
-const allMonth=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-document.getElementById("month").innerText=allMonth[monthToday];
-const dateToday=fullDateToday.getDate();
-document.getElementById("date").innerText=dateToday;
-const yearToday=fullDateToday.getFullYear();
-document.getElementById("year").innerText=yearToday;
+// day date 
+const dayDateArray= new Date().toDateString().split(" ");
+const day=dayDateArray.shift();
+const date=dayDateArray.join(" ");
+document.getElementById("day").innerHTML=`${day} ,`;
+document.getElementById("date").innerText=date;
+console.log(day, date);
 
 // time
 const currentTime = new Date().toLocaleString().split(",")[1];
@@ -40,7 +34,7 @@ for(let completeButton of completeButtons ){
     clickedButton.style.color="#cfd0d9";
     let decreaseNumber=parseInt(document.getElementById("number-to-decrease").innerText);
     let increaseNumber=parseInt(document.getElementById("number-to-increase").innerText);
-
+    
     const titleParagraph=document.getElementById(id+"-title").innerText; 
     const historyContainer=document.getElementById("history-container");
     const historyAdd=document.createElement("p");
