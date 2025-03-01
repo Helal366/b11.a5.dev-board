@@ -1,16 +1,17 @@
 // body background change
-const bgColors=["#f4f7ff","#ade8dd", "#e7f8d7", "#c8e3cd", "#eba6af", "#bae6f4", "#d3ad9f", "#e1a4b6", "#abcdc5", "#d5cbf5"];
+const bgColors=["#f4f7ff","#ade8dd", "#d5cbf5", "#e7f8d7", "#c8e3cd", "#eba6af", "#bae6f4", "#d3ad9f", "#e1a4b6", "#abcdc5"];
 let bgColorsIndex=0;
 document.getElementById("body-bg-change").addEventListener("click", function(){
-    document.body.style.backgroundColor=bgColors[bgColorsIndex];
-    for(i=0; i<bgColors.length; i++){
-        if(bgColorsIndex===bgColors.length){
-            bgColorsIndex=0;
+    for (let i = 0; i < bgColors.length; i++) {
+        if (bgColorsIndex === bgColors.length) {
+            bgColorsIndex = 0;
+        } else {
+            bgColorsIndex = bgColorsIndex + 1;
         }
-        else{
-            bgColorsIndex=bgColorsIndex+1;
-        }
+    
+            document.body.style.backgroundColor = bgColors[bgColorsIndex];
     }});
+
 
 // day date 
 const dayDateArray= new Date().toDateString().split(" ");
@@ -18,10 +19,10 @@ const day=dayDateArray.shift();
 const date=dayDateArray.join(" ");
 document.getElementById("day").innerHTML=`${day} ,`;
 document.getElementById("date").innerText=date;
-console.log(day, date);
 
 // time
 const currentTime = new Date().toLocaleString().split(",")[1];
+
 
 // increase number || decrease number || history add
 const completeButtons=document.querySelectorAll(".complete");

@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- title -->
     <title>Blogs</title>
-    <!-- daisyUI link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- daisyUI and Tailwind link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- poppins in body -->
+
+    <!-- monospace in body -->
      <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
         }
      </style>
 </head>
@@ -44,40 +47,223 @@
 
         <section class="mb-6 space-y-6">
 <!-- q-1 -->
-        <div class="shadow-md bg-white rounded-xl py-5 space-y-10 text-xl">
-            <p class="font-bold mt-5 mb-2 px-4">Question-1: What are the different ways to select an element in the DOM?</p>
+        <section class="shadow-md bg-white rounded-xl p-5 ">
+            <p class="font-bold text-xl mt-5 mb-2 p-4 bg-gray-400 text-white shadow-sm rounded-xl">Question-1: What are the different ways to select an element in the DOM?</p>
             <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
-            <p class="mb-5 px-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vero reiciendis dolorem animi odio repudiandae tempora nam adipisci nulla sequi!</p>
-        </div>
+            <div class="mb-5 px-4">
+                <p class="font-bold text-xl">Answer:</p>
+                <p class="font-semibold text-lg">There are several ways to select an element in the DOM. Some are expressed below.</p>
+                <section class="pl-8 text-lg" style="list-style-type: decimal;">
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>1. Select an element by it's id.</p>
+                            <p class="ml-4">a. document.getElementById </p>
+                            <p class="ml-4">b. document.querySelector </p>
+                    </div>
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>2. Select an element by it's class name.</p>
+                            <p class="ml-4">a. document.getElementsByClassName </p>
+                            <p class="ml-4">b. document.querySelector </p>
+                    </div>
+                   
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>3. Select multiple elements by their common class name.</p>
+                            <p class="ml-4">a. document.getElementsByClassName </p>
+                            <p class="ml-4">b. document.querySelectorAll </p>
+                    </div>   
+                     
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>4. Select an element by it's tag name.</p>
+                            <p class="ml-4">a. document.getElementsByTagName </p>
+                            <p class="ml-4">b. document.querySelector</p>
+                    </div> 
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>5. Select multiple elements by their common tag name.</p>
+                            <p class="ml-4">a. document.getElementsByTagName </p>
+                            <p class="ml-4">b. document.querySelectorAll</p>
+                    </div> 
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>6. Select an element by it's name from input field.</p>
+                            <p class="ml-4">a. document.getElementsByName </p>
+                            <p class="ml-4">b. document.querySelector</p>
+                    </div>
+                    
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>7. Select multiple element by their common name from input field.</p>
+                            <p class="ml-4">a. document.getElementsByName </p>
+                            <p class="ml-4">b. document.querySelectorAll</p>
+                    </div>
+                    
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>8. Select parent element from any of it's children.</p>
+                        <p class="ml-4">a. document.getElementById("childElementId").parentNode </p>
+                        <p class="ml-4">b. document.getElementsByClassName("childElementClassName").parentNode</p>
+                        <p class="ml-4">c. document.querySelector("childElement With Proper ID/ ClassName/ anyAttribute").parentNode</p>
+                    </div>
+                    
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>9. Select first child element from parent.</p>
+                            <p class="ml-4">a. document.getElementById("parentElementId").firstChild </p>
+                            <p class="ml-4">b. document.getElementsByClassName("parentElementClassName").firstChild</p>
+                            <p class="ml-4">c. document.querySelector("parentElement With Proper ID/ ClassName/ anyAttribute").firstChild</p>
+                            <p class="ml-4">d. document.getElementById("parentElementId").firstElementChild</p>
+                            <p class="ml-4">e. document.getElementsByClassName("parentElementClassName").firstElementChild</p>
+                            <p class="ml-4">f. document.querySelector("parentElement With Proper ID/ ClassName/ anyAttribute").firstElementChild</p>
+                    </div>
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>10. Select last child element from parent.</p>
+                            <p class="ml-4">a. document.getElementById("parentElementId").lastChild </p>
+                            <p class="ml-4">b. document.getElementsByClassName("parentElementClassName").lastChild</p>
+                            <p class="ml-4">c. document.querySelector("parentElement With Proper ID/ ClassName/ anyAttribute").lastChild</p>
+                            <p class="ml-4">d. document.getElementById("parentElementId").lastElementChild</p>
+                            <p class="ml-4">e. document.getElementsByClassName("parentElementClassName").lastElementChild</p>
+                            <p class="ml-4">f. document.querySelector("parentElement With Proper ID/ ClassName/ anyAttribute").lastElementChild</p>
+                    </div>
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>11. Select next sibling child element from a child element.</p>
+                            <p class="ml-4">a. document.getElementById("currentSiblingId").nextElementSibling </p>
+                            <p class="ml-4">b. document.getElementsByClassName("currentSiblingClassName").nextElementSibling</p>
+                            <p class="ml-4">c. document.querySelector("currentSibling With Proper ID/ ClassName/ anyAttribute").nextElementSibling</p>
+                    </div>
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>12. Select previous sibling child element from a child element.</p>
+                            <p class="ml-4">a. document.getElementById("currentSiblingId").previousElementSibling </p>
+                            <p class="ml-4">b. document.getElementsByClassName("currentSiblingClassName").previousElementSibling</p>
+                            <p class="ml-4">c. document.querySelector("currentSibling With Proper ID/ ClassName/ anyAttribute").previousElementSibling</p>
+                    </div>
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>13. Select all children element from parent.</p>
+                            <p class="ml-4">a. document.getElementById("parentElementId").childNodes </p>
+                            <p class="ml-4">b. document.getElementsByClassName("parentElementClassName").childNodes</p>
+                            <p class="ml-4">c. document.querySelector("parentElement With Proper ID/ ClassName/ anyAttribute").childNodes</p>
+                            <p class="ml-4">d. document.getElementById("parentElementId").children</p>
+                            <p class="ml-4">e. document.getElementsByClassName("parentElementClassName").children</p>
+                            <p class="ml-4">f. document.querySelector("parentElement With Proper ID/ ClassName/ anyAttribute").children</p>
+                    </div>
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>14. Select element body</p>
+                            <p class="ml-4">a. document.body </p>
+                    </div>
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>15. Select elements from CSS selectors.</p>
+                            <p class="ml-4">a. document.querySelector </p>
+                            <p class="ml-4">a. document.querySelectorAll </p>
+                    </div>
+
+                    <div class="bg-gray-200 m-3 p-4 shadow-sm">
+                        <p>16. Sometimes elements can be selected dynamically by id, classname, any or multiple attributes.</p>
+                    </div>      
+                </section>
+            </div>
+        </section>
 <!-- q-2 -->
-        <div class="shadow-md bg-white rounded-xl py-5 space-y-10 text-xl mb-6">
-            <p class="font-bold mt-5 mb-2 px-4">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+        <section class="shadow-md bg-white rounded-xl py-5 px-8 space-y-10 mb-6">
+            <p class="font-bold text-xl mt-5 mb-2 p-4 bg-gray-400 text-white shadow-sm rounded-xl ">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
             <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
-            <p class="mb-5 px-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vero reiciendis dolorem animi odio repudiandae tempora nam adipisci nulla sequi!</p>
-        </div>
+            <p class="font-bold text-xl ">Answer:</p>
+            <p class="bg-slate-100 p-4 shadow-sm">
+                <span class="font-semibold text-lg">innerHTML</span><br>
+                InnerHTML can read both markup tags and contents of an element.
+                When console.log is used for innerHTML of an element, browser
+                displays both HTML tags and contents. Both HTML tags and contents 
+                can be set by innerHTML. innerHTML can get hidden markups too.
+            </p>
+            <p class="bg-slate-100 p-4 shadow-sm">
+                <span class="font-semibold text-lg">innerText</span><br>
+                InnerText can read only contents of an element and can not get
+                the markup tags. When console.log is used for innerText of an element, 
+                browser displays only contents. Only contents can be set by innerText and line-break, white-spaces are included. innerText can not get hidden markups
+                or contents.
+            </p>
+
+            <p class="bg-slate-100 p-4 shadow-sm">
+                <span class="font-semibold text-lg">textContent</span><br>
+                textContent can read only contents of an element and can not get
+                the markup tags. When console.log is used for textContents of an element, 
+                browser displays only contents both visible and hidden. Only contents can 
+                be set by innerText and line-break, white-spaces are ignored. innerText can 
+                get hidden contents.
+            </p>
+        </section>
 
 <!-- q-3 -->
-        <div class="shadow-md bg-white rounded-xl py-5 space-y-10 text-xl mb-6">
-            <p class="font-bold mt-5 mb-2 px-4">Question-3: What is event delegation in the DOM?</p>
+        <section class="shadow-md bg-white rounded-xl py-5 px-8 space-y-10 text-xl mb-6">
+            <p class="font-bold mt-5 mb-2 p-4 bg-gray-400 text-white shadow-sm rounded-xl">Question-3: What is event delegation in the DOM?</p>
             <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
-            <p class="mb-5 px-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vero reiciendis dolorem animi odio repudiandae tempora nam adipisci nulla sequi!</p>
-        </div>
-<!-- q-4 -->
-    <div class="shadow-md bg-white rounded-xl py-5 space-y-10 text-xl mb-6">
-        <p class="font-bold mt-5 mb-2 px-4">Question-4: What is event bubbling in the DOM?</p>
-        <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
-        <p class="mb-5 px-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vero reiciendis dolorem animi odio repudiandae tempora nam adipisci nulla sequi!</p>
-    </div>
-
-<!-- q-5 -->
-    <div class="shadow-md bg-white rounded-xl py-5 space-y-10 text-xl mb-6">
-        <p class="font-bold mt-5 mb-2 px-4">Question-5: How do you create, add, and remove elements using JavaScript?</p>
-        <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
-        <p class="mb-5 px-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vero reiciendis dolorem animi odio repudiandae tempora nam adipisci nulla sequi!</p>
-    </div>
+            <p class="font-bold text-xl ">Answer:</p>
+            <div class="bg-slate-100 p-4 shadow-sm">
+                <span class="font-semibold text-lg">eventDelegation:</span><br>
+                eventDelegation is a pattern to handle events that suggests to handle
+                events at the parent level of DOM. It will need fewer event handler for
+                same logic.
+            </div>
+            <div class="bg-slate-100 p-4 shadow-sm">
+                <span class="font-semibold text-lg">Example:</span><br>
+                <span>Let's consider the example below:</span><br><br>
+                <div id="delegate-html" class="m-3 p-4 bg-white shadow-sm"></div>
+                <p>In this example, we are going to make an alert with the innerText 
+                    clicked button. <br>
+                    For this purpose, first, we are going to write js code using event handler 
+                    with button (child elements). The code is as below:
+                </p>
+                <br><br>
+                <div id="child-handler" class="m-3 p-4 bg-white shadow-sm"></div>
+                <p>Here, we have to use four event handlers for four buttons. If, there were 
+                    more buttons, there had to use more event handlers.
+                </p>
+                <br><br>
+                <p>Now, we are going to write js code using event handler with div(parent element). </p>
+                <div id="parent-handler" class="m-3 p-4 bg-white shadow-sm"></div>
+                <p>In this code, only one event handler is used for the same logic. More 
+                    event handlers are not used for the same logic. This process is known as event delegation. </p>
+            </div>
+                   
+        
         </section>
+<!-- q-4 -->
+    <section class="shadow-md bg-white rounded-xl py-5 px-8 space-y-10 text-xl mb-6">
+        <p class="font-bold mt-5 mb-2 p-4 bg-gray-400 text-white shadow-sm rounded-xl">Question-4: What is event bubbling in the DOM?</p>
+        <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
+        <p class="font-bold text-xl ">Answer:</p>
+        <p class="mb-5 px-4">Event bubble is mainly a concept of DOM tree. This is a propation 
+            process from an inner child where the event actually occurs and goes up through it's 
+            parent toupper parent to upper parent to upper ancestor. This prosess is ended up 
+            when "document" is found.There is no further parent for "document". ascenerio is 
+            present below:</p>
+        <div class="bg-gray-200 m-3 p-4 shadow-sm">
+            <p class="mt-3"><button class="btn text-2xl">Document</button></p>
+            <p class="mt-3"><button class="btn"><i class="fa-solid fa-arrow-up text-2xl"></i></button></p>
+            <p class="mt-3"><button class="btn text-2xl">HTML</button></p>
+            <p class="mt-3"><button class="btn"><i class="fa-solid fa-arrow-up text-2xl"></i></button></p>
+            <p class="mt-3"><button class="btn text-2xl">Body</button></p>
+            <p class="mt-3"><button class="btn"><i class="fa-solid fa-arrow-up text-2xl"></i></button></p>
+            <p class="mt-3"><button class="btn text-2xl">Main</button></p>
+            <p class="mt-3"><button class="btn"><i class="fa-solid fa-arrow-up text-2xl"></i></button></p>
+            <p class="mt-3"><button class="btn text-2xl">Section</button></p>
+            <p class="mt-3"><button class="btn"><i class="fa-solid fa-arrow-up text-2xl"></i></button></p>
+            <p class="mt-3"><button class="btn text-2xl">Div</button></p>
+            <p class="mt-3"><button class="btn"><i class="fa-solid fa-arrow-up text-2xl"></i></button></p>
+            <p class="mt-3"><button class="btn text-2xl">Button</button>(The event occured at this button.)</p>
+        </div>
     </section>
 
+<!-- q-5 -->
+            <section class="shadow-md bg-white rounded-xl py-5 px-8 space-y-10 text-xl mb-6">
+                <p class="font-bold mt-5 mb-2 p-4 bg-gray-400 text-white shadow-sm rounded-xl">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+                <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
+                <p class="mb-5 px-4"></p>
+            </section>
+
+    </section>
+</section>
  <script src="scripts/blog.js"></script>   
 </body>
 </html>
