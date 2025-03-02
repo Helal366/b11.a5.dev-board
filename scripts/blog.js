@@ -57,7 +57,7 @@ myInsertDiv(parentIdSeven, innerCodeSeven);
 
 const parentIdEight="#container-five"
 const innerCodeEight=`const removeParagraph=document.querySelector("#p-one");
-           textContainer.removeChild(removeParagraph);`
+                      textContainer.removeChild(removeParagraph);`
 myInsertDiv(parentIdEight, innerCodeEight);
 
 
