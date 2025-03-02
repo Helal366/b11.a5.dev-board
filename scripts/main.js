@@ -20,10 +20,12 @@ document.getElementById("date").innerText=date;
 const currentTime = new Date().toLocaleString().split(",")[1];
 // increase number || decrease number || history add
 const sixCardContainer=document.querySelector("#six-cards-container");
+let idContainer=[];
 sixCardContainer.addEventListener("click", function(event){
     if(event.target.classList.contains("complete")){
         clickedButton=event.target;
         const id=clickedButton.id;
+        idContainer.push(id);
         clickedButton.style.backgroundColor="#dfe0e9";
         clickedButton.style.color="#cfd0d9";
         let decreaseNumber=parseInt(document.getElementById("number-to-decrease").innerText);
@@ -39,7 +41,7 @@ sixCardContainer.addEventListener("click", function(event){
         <span>You have completed the task ${titleParagraph} at ${currentTime}</span>
         `
         if(!clickedButton.classList.contains("disabled")){
-            alert("Board updated Successfully.")
+            alert("Board updated successfully.")
             decreaseNumber=decreaseNumber-1;
             document.getElementById("number-to-decrease").innerText=decreaseNumber;
             increaseNumber=increaseNumber+1;
@@ -51,6 +53,9 @@ sixCardContainer.addEventListener("click", function(event){
             increaseNumber=increaseNumber;
         }
         clickedButton.classList.add("disabled");
+        if(idContainer.length===6){
+            alert("Congrats!!! You have completed all the current tasks.")
+        }
         }
 })
 // history remove
