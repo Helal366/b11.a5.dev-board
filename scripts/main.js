@@ -2,13 +2,19 @@
 const bgColors=["#f4f7ff","#ade8dd", "#d5cbf5", "#e7f8d7", "#c8e3cd", "#eba6af", "#bae6f4", "#d3ad9f", "#e1a4b6", "#abcdc5"];
 let bgColorsIndex=0;
 document.getElementById("body-bg-change").addEventListener("click", function(){
-    for (let i = 0; i < bgColors.length; i++) {
-        if (bgColorsIndex === bgColors.length) {
-            bgColorsIndex = 0;
-        } else {
-            bgColorsIndex = bgColorsIndex + 1;
-        }    
-            document.body.style.backgroundColor = bgColors[bgColorsIndex];
+    for (let i = 0; i <10; i++) {
+        // if (bgColorsIndex === bgColors.length) {
+        //     bgColorsIndex = 0;
+        // } else {
+        //     bgColorsIndex = bgColorsIndex + 1;
+        // }    
+        if(bgColorsIndex<bgColors.length){
+            bgColorsIndex+=1;
+        }
+        else if(!bgColorsIndex<bgColors.length){
+            bgColorsIndex=0;
+        }
+        document.body.style.backgroundColor = bgColors[bgColorsIndex];    
     }});
 // day date 
 const dayDateArray= new Date().toDateString().split(" ");
@@ -28,6 +34,7 @@ sixCardContainer.addEventListener("click", function(event){
         idContainer.push(id);
         clickedButton.style.backgroundColor="#dfe0e9";
         clickedButton.style.color="#cfd0d9";
+        clickedButton.innerText=`Completed`
         let decreaseNumber=parseInt(document.getElementById("number-to-decrease").innerText);
         let increaseNumber=parseInt(document.getElementById("number-to-increase").innerText);        
         const titleParagraph=document.getElementById(id+"-title").innerText; 
