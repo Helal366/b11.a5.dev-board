@@ -47,11 +47,11 @@
 
         <section class="mb-6 space-y-6">
 <!-- q-1 -->
-        <section class="shadow-md bg-white rounded-xl p-5 ">
+        <section class="shadow-md bg-white rounded-xl py-5 px-8 ">
             <p class="font-bold text-3xl mt-5 mb-2 p-4 bg-gray-400 text-white shadow-sm rounded-xl">Question-1: What are the different ways to select an element in the DOM?</p>
             <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
-            <div class="mb-5 px-4">
-                <p class="font-bold text-xl">Answer:</p>
+            <section class="mb-5 px-4">
+                <h2 class="font-bold text-xl">Answer:</h2>
                 <p class="font-semibold text-lg">There are several ways to select an element in the DOM. Some are expressed below.</p>
                 <section class="pl-8 text-lg" style="list-style-type: decimal;">
                     <div class="bg-gray-200 m-3 p-4 shadow-sm">
@@ -162,50 +162,55 @@
                         <p>16. Sometimes elements can be selected dynamically by id, classname, any or multiple attributes.</p>
                     </div>      
                 </section>
-            </div>
+            </section>
         </section>
 <!-- q-2 -->
-        <section class="shadow-md bg-white rounded-xl py-5 px-8 space-y-10 mb-6">
-            <p class="font-bold text-3xl mt-5 mb-2 p-4 bg-gray-400 text-white shadow-sm rounded-xl ">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+        <section class="shadow-md bg-white rounded-xl py-5 px-8 mb-6">
+            <h1 class="font-bold text-3xl mt-5 mb-2 p-4 bg-gray-400 text-white shadow-sm rounded-xl ">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
             <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
-            <p class="font-bold text-xl ">Answer:</p>
-            <p class="bg-slate-100 p-4 shadow-sm">
-                <span class="font-semibold text-lg">innerHTML</span><br>
-                InnerHTML can read both markup tags and contents of an element.
-                When console.log is used for innerHTML of an element, browser
-                displays both HTML tags and contents. Both HTML tags and contents 
-                can be set by innerHTML. innerHTML can get hidden markups too.
+            <h2 class="font-bold text-xl">Answer:</h2>
+            <p class="font-semibold text-lg">A comperative discussion among innerHTML, innerText and textContent 
+                                             are shortly presented below:
             </p>
-            <p class="bg-slate-100 p-4 shadow-sm">
-                <span class="font-semibold text-lg">innerText</span><br>
-                InnerText can read only contents of an element and can not get
-                the markup tags. When console.log is used for innerText of an element, 
-                browser displays only contents. Only contents can be set by innerText and line-break, white-spaces are included. innerText can not get hidden markups
-                or contents.
-            </p>
-
-            <p class="bg-slate-100 p-4 shadow-sm">
-                <span class="font-semibold text-lg">textContent</span><br>
-                textContent can read only contents of an element and can not get
-                the markup tags. When console.log is used for textContents of an element, 
-                browser displays only contents both visible and hidden. Only contents can 
-                be set by innerText and line-break, white-spaces are ignored. innerText can 
-                get hidden contents.
-            </p>
+            <div class="pl-8">
+                <p class="bg-slate-100 m-3 p-4 shadow-sm">
+                    <span class="font-semibold text-lg">innerHTML</span><br>
+                    InnerHTML can read both markup tags and contents of an element.
+                    When console.log is used for innerHTML of an element, browser
+                    displays both HTML tags and contents. Both HTML tags and contents 
+                    can be set by innerHTML. innerHTML can get hidden markups too.
+                </p>
+                <p class="bg-slate-100 m-3 p-4 shadow-sm">
+                    <span class="font-semibold text-lg">innerText</span><br>
+                    InnerText can read only contents of an element and can not get
+                    the markup tags. When console.log is used for innerText of an element, 
+                    browser displays only contents. Only contents can be set by innerText and line-break, white-spaces are included. innerText can not get hidden markups
+                    or contents.
+                </p>
+    
+                <p class="bg-slate-100 m-3 p-4 shadow-sm">
+                    <span class="font-semibold text-lg">textContent</span><br>
+                    textContent can read only contents of an element and can not get
+                    the markup tags. When console.log is used for textContents of an element, 
+                    browser displays only contents both visible and hidden. Only contents can 
+                    be set by innerText and line-break, white-spaces are ignored. innerText can 
+                    get hidden contents.
+                </p>
+            </div>
         </section>
 
 <!-- q-3 -->
-        <section class="shadow-md bg-white rounded-xl py-5 px-8 space-y-10 text-xl mb-6">
+        <section class="shadow-md bg-white rounded-xl py-5 px-8 mb-6">
             <p class="font-bold mt-5 mb-2 p-4 bg-gray-400 text-white text-3xl shadow-sm rounded-xl">Question-3: What is event delegation in the DOM?</p>
             <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
             <p class="font-bold text-xl ">Answer:</p>
-            <div class="bg-slate-100 p-4 shadow-sm">
+            <div class="bg-slate-100 ml-8 my-3 mr-3 p-4 shadow-sm">
                 <span class="font-semibold text-lg">eventDelegation:</span><br>
-                eventDelegation is a propagation pattern that suggests to handle
-                events at the parent level of DOM instead of inner child level. It will need fewer event handler for
-                same logic.
+                eventDelegation is a programming technique that suggests to handle
+                events at the parent level of DOM instead of inner child level. It will 
+                need fewer event handler as well as less code for the same logic.
             </div>
-            <div class="bg-slate-100 p-4 shadow-sm">
+            <div class="bg-slate-100 ml-8 my-3 mr-3 p-4 shadow-sm">
                 <span class="font-semibold text-lg">Example:</span><br>
                 <span>Let's consider the example below:</span><br><br>
                 <div id="delegate-html" class="m-3 p-4 bg-white shadow-sm"></div>
@@ -223,22 +228,22 @@
                 <p>Now, we are going to write js code using event handler with div(parent element). </p>
                 <div id="parent-handler" class="m-3 p-4 bg-white shadow-sm"></div>
                 <p>In this code, only one event handler is used for the same logic. More 
-                    event handlers are not used for the same logic. This process is known as event delegation. </p>
+                    event handlers are not used for the same logic. And the code is short. This process is known as event delegation. </p>
             </div>
                    
         
         </section>
 <!-- q-4 -->
-    <section class="shadow-md bg-white rounded-xl py-5 px-8 space-y-10 text-xl mb-6">
-        <p class="font-bold mt-5 mb-2 p-4 bg-gray-400 text-white text-3xl shadow-sm rounded-xl">Question-4: What is event bubbling in the DOM?</p>
+    <section class="shadow-md bg-white rounded-xl py-5 px-8 mb-6">
+        <h2 class="font-bold mt-5 mb-2 p-4 bg-gray-400 text-white text-3xl shadow-sm rounded-xl">Question-4: What is event bubbling in the DOM?</h2>
         <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
         <p class="font-bold text-xl ">Answer:</p>
-        <p class="mb-5 px-4">Event bubble is mainly a concept of DOM tree. This is a propation 
-            process from an inner child where the event actually occurs and goes up through it's 
-            parent toupper parent to upper parent to upper ancestor. This prosess is ended up 
-            when "document" is found.There is no further parent for "document". A scenerio is 
+        <p class="font-semibold ">Event bubble is mainly a concept of DOM tree. This is a propagation 
+            process from an inner child (on which child the event is actually occurs) and goes up through it's 
+            parent to upper parent to upper parent to upper ancestors. This process is ended up 
+            when "document" is found.There is no further parent for the element "document". A scenario is 
             present below:</p>
-        <div class="bg-gray-200 m-3 p-4 shadow-sm">
+        <div class="bg-slate-100 ml-8 my-3 mr-3 p-4 shadow-sm">
             <p class="mt-3 text-center"><button class="btn text-4xl">Document</button></p>
             <p class="mt-3 text-center"><button class="btn"><i class="fa-solid fa-arrow-up text-4xl"></i></button></p>
             <p class="mt-3 text-center"><button class="btn text-4xl">HTML</button></p>
@@ -258,47 +263,50 @@
     </section>
 
 <!-- q-5 -->
-            <section class="shadow-md bg-white rounded-xl py-5 px-8 space-y-10 text-xl mb-6">
-                <p class="font-bold mt-5 mb-2 p-4 bg-gray-400 text-white text-3xl shadow-sm rounded-xl">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+            <section class="shadow-md bg-white rounded-xl py-5 px-8 mb-6">
+                <h2 class="font-bold mt-5 mb-2 p-4 bg-gray-400 text-white text-3xl shadow-sm rounded-xl">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
                 <hr class="border-0 border-t-[1px] border-dotted border-[#d7dcff] mb-4">
-                <p class="mb-5 px-4">Elements can created, added and removed dynamically in javascript DOM. 
+                <p class="font-bold text-xl ">Answer:</p>
+                <p class="font-semibold text-lg">Elements can created, added and removed dynamically in javascript DOM. 
                     Some short discussions are presented below about these three topics.
                 </p>
-                <div class="bg-slate-100 py-5 px-8">
-                    <p class="text=2xl font-semibold bg-white shadow-sm p-4 m-3">01. Creating elements:</p>
-                    <P>Two elements have to create into a div. One is a div and another is a 
-                        paragraph. The hTML is as below:</P>
-                    <div id="container" class="m-3 p-4 bg-white"></div>
-                    <br><br>
-                    <p>Now a div and a paragraph are to create to add into the div with id "text-container". 
-                        The javascript code is as below. </p>
-                        <div id="container-two" class="m-3 p-4 bg-white"></div>
-                </div>
-                <div class="bg-slate-100 py-5 px-8">
-                    <p class="text=2xl font-semibold bg-white shadow-sm p-4 m-3">02. Adding elements:</p>
-                    <P>Two elements are created. One is a div and the other is a paragraph. 
-                        Now these two elements will be added into the div with id "text-container".
-                        The paragraph will be added as last child. Some text are added into the paragraph
-                        using innerText. <br>
-                        The sample javascript code is as below: 
-                    </P>
-                    <div id="container-three" class="m-3 p-4 bg-white"></div>
-                    <br><br>
-                    <p>Now the created div will be added as first child into the very div. Some 
-                        text are added into the paragraph using innerText.
-                    <br>
-                    The sample javascript code is as below:
-                </p>
-                    <div id="container-four" class="m-3 p-4 bg-white"></div>    
-                </div>
-
-                <div class="bg-slate-100 py-5 px-8">
-                    <p class="text=2xl font-semibold bg-white shadow-sm p-4 m-3">03. Removing elements:</p>
-                    <P> Now the paragraph with id "p-one" will be removed.
-                         <br>
-                        The sample javascript code is as below: 
-                    </P>
-                    <div id="container-five" class="m-3 p-4 bg-white"></div>   
+                <div class="pl-8 my-3">
+                    <div class="bg-slate-100 py-5 px-8">
+                        <p class="text=2xl font-semibold bg-white shadow-sm p-4 m-3">01. Creating elements:</p>
+                        <P>Two elements have to create into a div. One is a div and another is a 
+                            paragraph. The hTML is as below:</P>
+                        <div id="container" class="m-3 p-4 bg-white"></div>
+                        <br><br>
+                        <p>Now a div and a paragraph are to create to add into the div with id "text-container". 
+                            The javascript code is as below. </p>
+                            <div id="container-two" class="m-3 p-4 bg-white"></div>
+                    </div>
+                    <div class="bg-slate-100 py-5 px-8">
+                        <p class="text=2xl font-semibold bg-white shadow-sm p-4 m-3">02. Adding elements:</p>
+                        <P>Two elements are created. One is a div and the other is a paragraph. 
+                            Now these two elements will be added into the div with id "text-container".
+                            The paragraph will be added as last child. Some text are added into the paragraph
+                            using innerText. <br>
+                            The sample javascript code is as below: 
+                        </P>
+                        <div id="container-three" class="m-3 p-4 bg-white"></div>
+                        <br><br>
+                        <p>Now the created div will be added as first child into the very div. Some 
+                            text are added into the paragraph using innerText.
+                        <br>
+                        The sample javascript code is as below:
+                    </p>
+                        <div id="container-four" class="m-3 p-4 bg-white"></div>    
+                    </div>
+    
+                    <div class="bg-slate-100 py-5 px-8">
+                        <p class="text=2xl font-semibold bg-white shadow-sm p-4 m-3">03. Removing elements:</p>
+                        <P> Now the paragraph with id "p-one" will be removed.
+                             <br>
+                            The sample javascript code is as below: 
+                        </P>
+                        <div id="container-five" class="m-3 p-4 bg-white"></div>   
+                    </div>
                 </div>
             </section>
 

@@ -24,10 +24,9 @@ myInsertDiv(parentIdTwo, innerCodeTwo);
 const parentIdThree="#parent-handler"
 const innerCodeThree=`let fruitsList=document.querySelector("#fruit-div");
                       fruitsList.addEventListener("click", function(event){
-                      let btn=event.target.tagName;
-                      if(btn='BUTTON'){
-                      alert(event.target.innerText);
-                      }})`
+                      let text=event.target.innerText;
+                      alert(text);
+                      })`
 myInsertDiv(parentIdThree, innerCodeThree);
 
 const parentIdFour="#container"
