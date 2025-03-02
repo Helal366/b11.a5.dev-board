@@ -10,19 +10,14 @@ document.getElementById("body-bg-change").addEventListener("click", function(){
         }    
             document.body.style.backgroundColor = bgColors[bgColorsIndex];
     }});
-
-
 // day date 
 const dayDateArray= new Date().toDateString().split(" ");
 const day=dayDateArray.shift();
 const date=dayDateArray.join(" ");
 document.getElementById("day").innerHTML=`${day} ,`;
 document.getElementById("date").innerText=date;
-
 // time
 const currentTime = new Date().toLocaleString().split(",")[1];
-
-
 // increase number || decrease number || history add
 const sixCardContainer=document.querySelector("#six-cards-container");
 sixCardContainer.addEventListener("click", function(event){
@@ -32,8 +27,7 @@ sixCardContainer.addEventListener("click", function(event){
         clickedButton.style.backgroundColor="#dfe0e9";
         clickedButton.style.color="#cfd0d9";
         let decreaseNumber=parseInt(document.getElementById("number-to-decrease").innerText);
-        let increaseNumber=parseInt(document.getElementById("number-to-increase").innerText);
-        
+        let increaseNumber=parseInt(document.getElementById("number-to-increase").innerText);        
         const titleParagraph=document.getElementById(id+"-title").innerText; 
         const historyContainer=document.getElementById("history-container");
         const historyAdd=document.createElement("p");
@@ -59,18 +53,14 @@ sixCardContainer.addEventListener("click", function(event){
         clickedButton.classList.add("disabled");
         }
 })
-
 // history remove
 document.getElementById("clear-history").addEventListener("click", function(){
     document.getElementById("history-container").innerHTML="";
 })
-
 // go to blog.html
 document.getElementById("blog-html").addEventListener("click", function(){
     window.location.href="blog.html";
 })
-
-
 // extra
 
         
