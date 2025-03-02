@@ -7,8 +7,7 @@ document.getElementById("body-bg-change").addEventListener("click", function(){
             bgColorsIndex = 0;
         } else {
             bgColorsIndex = bgColorsIndex + 1;
-        }
-    
+        }    
             document.body.style.backgroundColor = bgColors[bgColorsIndex];
     }});
 
@@ -25,41 +24,41 @@ const currentTime = new Date().toLocaleString().split(",")[1];
 
 
 // increase number || decrease number || history add
-const completeButtons=document.querySelectorAll(".complete");
-for(let completeButton of completeButtons ){
-    completeButton.addEventListener("click", function(){
-     
-    const id=completeButton.id;  
-    const clickedButton=document.getElementById(id);
-    clickedButton.style.backgroundColor="#dfe0e9";
-    clickedButton.style.color="#cfd0d9";
-    let decreaseNumber=parseInt(document.getElementById("number-to-decrease").innerText);
-    let increaseNumber=parseInt(document.getElementById("number-to-increase").innerText);
-    
-    const titleParagraph=document.getElementById(id+"-title").innerText; 
-    const historyContainer=document.getElementById("history-container");
-    const historyAdd=document.createElement("p");
-    historyAdd.style.borderRadius="12px";
-    historyAdd.style.backgroundColor="#f4f7ff";
-    historyAdd.style.padding="10px 8px";
-    historyAdd.style.marginBottom="20px";
-    historyAdd.innerHTML=`
-    <span>You have completed the task ${titleParagraph} at ${currentTime}</span>
-    `
-    if(!clickedButton.classList.contains("disabled")){
-        alert("Board updated Successfully.")
-        decreaseNumber=decreaseNumber-1;
-        document.getElementById("number-to-decrease").innerText=decreaseNumber;
-        increaseNumber=increaseNumber+1;
-        document.getElementById("number-to-increase").innerText=increaseNumber;
-        historyContainer.appendChild(historyAdd);
-    }
-    else{
-        decreaseNumber=decreaseNumber;
-        increaseNumber=increaseNumber;
-    }
-    clickedButton.classList.add("disabled");
-})}
+const sixCardContainer=document.querySelector("#six-cards-container");
+sixCardContainer.addEventListener("click", function(event){
+    if(event.target.classList.contains("complete")){
+        clickedButton=event.target;
+        const id=clickedButton.id;
+        clickedButton.style.backgroundColor="#dfe0e9";
+        clickedButton.style.color="#cfd0d9";
+        let decreaseNumber=parseInt(document.getElementById("number-to-decrease").innerText);
+        let increaseNumber=parseInt(document.getElementById("number-to-increase").innerText);
+        
+        const titleParagraph=document.getElementById(id+"-title").innerText; 
+        const historyContainer=document.getElementById("history-container");
+        const historyAdd=document.createElement("p");
+        historyAdd.style.borderRadius="12px";
+        historyAdd.style.backgroundColor="#f4f7ff";
+        historyAdd.style.padding="10px 8px";
+        historyAdd.style.marginBottom="20px";
+        historyAdd.innerHTML=`
+        <span>You have completed the task ${titleParagraph} at ${currentTime}</span>
+        `
+        if(!clickedButton.classList.contains("disabled")){
+            alert("Board updated Successfully.")
+            decreaseNumber=decreaseNumber-1;
+            document.getElementById("number-to-decrease").innerText=decreaseNumber;
+            increaseNumber=increaseNumber+1;
+            document.getElementById("number-to-increase").innerText=increaseNumber;
+            historyContainer.appendChild(historyAdd);
+        }
+        else{
+            decreaseNumber=decreaseNumber;
+            increaseNumber=increaseNumber;
+        }
+        clickedButton.classList.add("disabled");
+        }
+})
 
 // history remove
 document.getElementById("clear-history").addEventListener("click", function(){
